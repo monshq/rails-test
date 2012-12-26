@@ -54,7 +54,7 @@ class UsersController < ApplicationController
     if signed_in?
       redirect_to root_path
     end
-    
+
     respond_to do |format|
       if @user.save
         sign_in @user
@@ -62,7 +62,6 @@ class UsersController < ApplicationController
         format.html { redirect_back_or @user, notice: 'User was successfully created.' }
         format.json { render json: @user, status: :created, location: @user }
       else
-        flash[:error] = "Server error"
         format.html { render action: "new" }
         format.json { render json: @user.errors, status: :unprocessable_entity }
       end

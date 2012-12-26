@@ -26,7 +26,7 @@ module SessionsHelper
     end
 
     def redirect_back_or(default, options = {})
-        redirect_to(session[:return_to] || default, options[:notice])
+        redirect_to(session[:return_to] || default)
         session.delete(:return_to)
     end
 
