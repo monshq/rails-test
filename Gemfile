@@ -6,6 +6,14 @@ gem 'rails', '3.2.9'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'pg', '0.12.2'
+gem 'bcrypt-ruby'
+gem 'bootstrap-sass'
+
+gem 'haml'
+
+group :development do
+	gem 'annotate'
+end
 
 
 # Gems used only for assets and not required
