@@ -8,6 +8,10 @@ gem 'rails', '3.2.9'
 gem 'pg', '0.12.2'
 gem 'bcrypt-ruby'
 gem 'bootstrap-sass'
+gem 'faker'
+gem 'will_paginate'
+gem 'bootstrap-will_paginate'
+
 
 gem 'haml'
 
