@@ -1,4 +1,9 @@
 class MicropostsController < ApplicationController
+
+  before_filter :signed_in_user #,  only: [:create, :destroy, :index]
+  before_filter :correct_user,    only: [:destroy]
+  before_filter :admin_user,      only: [:index]
+
   # GET /microposts
   # GET /microposts.json
   def index
@@ -40,14 +45,15 @@ class MicropostsController < ApplicationController
   # POST /microposts
   # POST /microposts.json
   def create
-    @micropost = Micropost.new(params[:micropost])
+    @micropost = current_user.microposts.build(params[:micropost])  #Micropost.new(params[:micropost])
 
     respond_to do |format|
       if @micropost.save
-        format.html { redirect_to @micropost, notice: 'Micropost was successfully created.' }
+        flash[:success] = 'Micropost was successfully created.'
+        format.html { redirect_to :back }
         format.json { render json: @micropost, status: :created, location: @micropost }
       else
-        format.html { render action: "new" }
+        format.html { redirect_to "home" } #:back }
         format.json { render json: @micropost.errors, status: :unprocessable_entity }
       end
     end
@@ -60,7 +66,7 @@ class MicropostsController < ApplicationController
 
     respond_to do |format|
       if @micropost.update_attributes(params[:micropost])
-        format.html { redirect_to @micropost, notice: 'Micropost was successfully updated.' }
+        format.html { redirect_to @micropost } #, notice: 'Micropost was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
@@ -76,8 +82,23 @@ class MicropostsController < ApplicationController
     @micropost.destroy
 
     respond_to do |format|
-      format.html { redirect_to microposts_url }
+      format.html { redirect_to :back }
       format.json { head :no_content }
+    end
+  end
+
+private
+
+  def correct_user
+    @micropost = current_user.microposts.find_by_id(params[:id])
+    if @micropost.nil? and !current_user.admin?
+      redirect_to root_path, notice: 'Cant touch this'
+    end
+  end
+
+  def admin_user
+    unless current_user.admin?
+      redirect_to '/home'
     end
   end
 end
