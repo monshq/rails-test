@@ -33,7 +33,7 @@ class User < ActiveRecord::Base
   validates :password, length: { minimum: 5 }
   validates :password_confirmation, presence: true
 
-  default_scope order: 'users.created_at ASC'
+  #default_scope order: 'users.created_at ASC'
 
   def feed
     Micropost.from_users_followed_by(self)

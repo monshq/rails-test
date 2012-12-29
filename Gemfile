@@ -12,7 +12,8 @@ gem 'faker'
 gem 'will_paginate'
 gem 'bootstrap-will_paginate'
 
-
+gem 'bootswatch-rails'
+gem 'bootbox-rails'
 gem 'haml'
 
 group :development do
