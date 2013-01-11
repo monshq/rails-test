@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.9'
+gem 'rails', '>= 3.2.11'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -15,6 +15,8 @@ gem 'bootstrap-will_paginate'
 gem 'bootswatch-rails'
 gem 'bootbox-rails'
 gem 'haml'
+
+gem 'turbolinks'
 
 group :development do
 	gem 'annotate'
