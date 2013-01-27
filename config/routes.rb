@@ -13,12 +13,12 @@ Myapp::Application.routes.draw do
   resources :microposts,  only: [:create, :destroy]
   resources :relationships, only: [:create, :destroy]
 
-  match '/signup',  to: 'users#new'
-  match '/signin',  to: 'sessions#new'
-  match '/signout', to: 'sessions#destroy', via: :delete
+  get '/signup',  to: 'users#new'
+  get '/signin',  to: 'sessions#new'
+  delete '/signout', to: 'sessions#destroy'#, via: :delete
 
-  root to: 'static_pages#home'
-
+  root to: 'static_pages#home', via: :get
+end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -76,4 +76,36 @@ Myapp::Application.routes.draw do
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id))(.:format)'
-end
+
+#== Route Map
+# Generated on 26 Jan 2013 20:43
+#
+# static_pages_signup GET    /static_pages/signup(.:format) static_pages#signup
+#   static_pages_help GET    /static_pages/help(.:format)   static_pages#help
+#          microposts GET    /microposts(.:format)          microposts#index
+#                     POST   /microposts(.:format)          microposts#create
+#       new_micropost GET    /microposts/new(.:format)      microposts#new
+#      edit_micropost GET    /microposts/:id/edit(.:format) microposts#edit
+#           micropost GET    /microposts/:id(.:format)      microposts#show
+#                     PUT    /microposts/:id(.:format)      microposts#update
+#                     DELETE /microposts/:id(.:format)      microposts#destroy
+#      following_user GET    /users/:id/following(.:format) users#following
+#      followers_user GET    /users/:id/followers(.:format) users#followers
+#               users GET    /users(.:format)               users#index
+#                     POST   /users(.:format)               users#create
+#            new_user GET    /users/new(.:format)           users#new
+#           edit_user GET    /users/:id/edit(.:format)      users#edit
+#                user GET    /users/:id(.:format)           users#show
+#                     PUT    /users/:id(.:format)           users#update
+#                     DELETE /users/:id(.:format)           users#destroy
+#            sessions POST   /sessions(.:format)            sessions#create
+#         new_session GET    /sessions/new(.:format)        sessions#new
+#             session DELETE /sessions/:id(.:format)        sessions#destroy
+#                     POST   /microposts(.:format)          microposts#create
+#                     DELETE /microposts/:id(.:format)      microposts#destroy
+#       relationships POST   /relationships(.:format)       relationships#create
+#        relationship DELETE /relationships/:id(.:format)   relationships#destroy
+#              signup GET    /signup(.:format)              users#new
+#              signin GET    /signin(.:format)              sessions#new
+#             signout DELETE /signout(.:format)             sessions#destroy
+#                root GET    /                              static_pages#home

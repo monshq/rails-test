@@ -52,10 +52,21 @@
 			}
 		},
 		{
+			"contents": "source 'https://rubygems.org'\n\ngem 'rails', '>= 3.2.11'\n\n# Bundle edge Rails instead:\n# gem 'rails', :git => 'git://github.com/rails/rails.git'\n\ngem 'pg', '0.12.2'\ngem 'bcrypt-ruby'\ngem 'bootstrap-sass'\ngem 'faker'\ngem 'will_paginate'\ngem 'bootstrap-will_paginate'\n\ngem 'bootswatch-rails'\ngem 'bootbox-rails'\ngem 'haml'\n\ngem 'turbolinks'\n\ngroup :development do\n	gem 'annotate'\nend\n\n\n# Gems used only for assets and not required\n# in production environments by default.\ngroup :assets do\n  gem 'sass-rails',   '~> 3.2.3'\n  gem 'coffee-rails', '~> 3.2.1'\n\n  # See https://github.com/sstephenson/execjs#readme for more supported runtimes\n  # gem 'therubyarcer', :platforms => :ruby\n\n  gem 'uglifier', '>= 1.0.3'\nend\n\ngroup :production do\n	#gem 'pg', '0.12.2'\nend\n\ngem 'jquery-rails'\n\n# To use ActiveModel has_secure_password\n# gem 'bcrypt-ruby', '~> 3.0.0'\n\n# To use Jbuilder templates for JSON\n# gem 'jbuilder'\n\n# Use unicorn as the app server\n# gem 'unicorn'\n\n# Deploy with Capistrano\n# gem 'capistrano'\n\n# To use debugger\n# gem 'debugger'\n",
 			"file": "Gemfile",
+			"file_size": 1038,
+			"file_write_time": 1357903476000000,
 			"settings":
 			{
-				"buffer_size": 1034,
+				"buffer_size": 1038,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/media/data/Server/demo/protected/config/main.php",
+			"settings":
+			{
+				"buffer_size": 2202,
 				"line_ending": "Unix"
 			}
 		},
@@ -589,15 +600,15 @@
 					"file": "Gemfile",
 					"settings":
 					{
-						"buffer_size": 1034,
+						"buffer_size": 1038,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								332,
-								332
+								651,
+								651
 							]
 						],
 						"settings":
@@ -700,6 +711,121 @@
 				},
 				{
 					"buffer": 4,
+					"file": "/media/data/Server/demo/protected/config/main.php",
+					"settings":
+					{
+						"buffer_size": 2202,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								666,
+								666
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110.0
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2.0,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": false,
+							"sublimelinter_mark_style": "outline",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 51.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
 					"file": "app/assets/javascripts/application.js",
 					"settings":
 					{

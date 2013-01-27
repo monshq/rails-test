@@ -50,6 +50,10 @@ input {
   height: auto !important;
 }
 
+textarea {
+  resize: vertical;
+}
+
 aside {
   section {
     padding: 10px 0;
