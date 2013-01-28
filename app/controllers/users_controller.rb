@@ -18,6 +18,10 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
+    unless User.exists?(params[:id])
+      redirect_to users_path, notice: "User with id = #{params[:id]} not found."
+      return
+    end
     @user = User.find(params[:id])
     @microposts = @user.microposts.paginate(page: params[:page])
 

@@ -3,6 +3,6 @@
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
 $ ->
-  $("textarea").keydown (event) ->
+  $("form").keydown (event) ->
     if event.keyCode is 13 and event.ctrlKey
-      $(this).closest("form").submit()
+      $(this).submit()

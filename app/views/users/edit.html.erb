@@ -1,3 +1,4 @@
+<% provide(:title, 'Edit profile') %>
 <h1>Editing user</h1>
 
 <%= form_for(@user) do |f| %>
@@ -20,11 +21,12 @@
     <%= f.password_field :password_confirmation %>
   </div>
   <div class="actions">
-    <%= f.submit "Edit account", class: "btn btn-large btn-primary" %>
+    <%= f.submit "Edit account", class: "btn btn-primary" %>
   </div>
 
-    <%= gravatar_for @user %>
-    <a href="http://gravatar.com/emails" target="_blank">Change</a>
+  <br>
+  <%= gravatar_for @user %>
+  <a href="http://gravatar.com/emails" target="_blank">Change</a>
 <% end %>
 
 
