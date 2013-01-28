@@ -18,6 +18,8 @@ gem 'bootswatch-rails'
 
 gem 'turbolinks'
 
+gem 'mail'
+
 group :development do
   # adding annotations for sql schemas
 	gem 'annotate'

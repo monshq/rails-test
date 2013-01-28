@@ -144,6 +144,7 @@ DEPENDENCIES
   coffee-rails (>= 3.2.1)
   faker
   jquery-rails
+  mail
   meta_request
   pg
   rails (>= 3.2.11)
